@@ -1,0 +1,28 @@
+<html>
+  <head>
+    <script>
+      var a = parseInt(prompt("Pon el primer término"));
+      var b = parseInt(prompt("Pon el segundo término"));
+      var c = parseInt(prompt("Pon el tercer término"));
+      // Calcular el interior de la raiz cuadrada
+      var raiz = (b * b) - (4 * a * c);
+      // Caso sin solución
+      if (raiz < 0) {
+        document.write("There are no solutions"); 
+      }
+      // Caso con una solución
+      if (raiz == 0) {
+        var result = -b / (2 * a);
+        document.write("There is one solution: " + result); 
+      }
+      // Caso con dos soluciones
+      if (raiz > 0) {
+        var result1 = (-b + Math.sqrt(raiz)) / (2 * a);
+        var result2 = (-b - Math.sqrt(raiz)) / (2 * a);
+        document.write("There are two solutions: " + result1 + " " + result2); 
+      }
+    </script>
+  </head>
+  <body>
+  </body>
+</html>
