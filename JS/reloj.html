@@ -1,20 +1,22 @@
+<!--Este código es una copia de una de las aventuras la web codelearn-->
 <html>
   <head>
     <title>Exercise 5</title>
     <script language="JavaScript">
       // Enseñar la hora
       function show_hour(){
-      var myTime = new Date();
-      var h = myTime.getHours().toString();
-      var m = myTime.getMinutes().toString();
-      if (m.length == 1){
-        m = "0" + m;
-      }
-      var s = myTime.getSeconds().toString();
-      if (s.length == 1){
-        s = "0" + s;
-      }
-      document.forms[0].myClock.value = h + " : " + m + " : " + s;
+        var myTime = new Date();
+        var h = myTime.getHours().toString();
+        var m = myTime.getMinutes().toString();
+        if (m.length == 1){
+            m = "0" + m;
+        }
+        var s = myTime.getSeconds().toString();
+        if (s.length == 1){
+            s = "0" + s;
+        }
+        document.forms[0].myClock.value = h + " : " + m + " : " + s;
+        document.forms[0].myClock2.value = m + " : " + s;
       }
       var r = setInterval("show_hour()", 500);
     </script>
@@ -24,6 +26,9 @@
     <form>
       <p align="left">
       <input type="text" size="10" name="myClock">
+      </p>
+      <p align="left">
+        <input type="text" size="10" name="myClock2">
       </p>
     </form>
     </body>
