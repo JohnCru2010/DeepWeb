@@ -1,0 +1,49 @@
+<html>
+  <head>
+    <script>
+      // Nombrar las variables
+      var numEvens = 0;
+      var numOdds = 0;
+      var numMultiples3 = 0;
+      var numMultiples3Evens = 0;
+      var text = "";
+      // Preguntar 10 numeros (bucle)
+      for (i = 1;i <= 10;i++) {
+        var num = parseInt(prompt("Step - " + i + ": Introduce a number"));
+        // Si es par sumar 1 a la variable numEvens
+        if (num % 2 == 0) {
+          numEvens++;      
+        }
+        // Si es impar sumar 1 a la variable numOdds
+        if (num % 2 != 0) {
+          numOdds++;      
+        }
+        // Si es multiple de 3 sumar 1 a la variable numMultiples3
+        if (num % 3 == 0) {
+          numMultiples3++;      
+        }
+        // Si es multiple de 3 y par sumar 1 a la variable numMultiples3Evens
+   		if (num % 3 == 0 && num % 2 == 0) {
+          numMultiples3Evens++;      
+        }
+      }
+      // Mostrar el texto final
+      text = text +
+      "<h1>Numbers Table</h1>" +
+      "<table width='350' border='1'>" +
+      "<tr align='left'>" +
+      "<th>Evens</th>" +
+      "<th>Odds</th>" +
+      "<th>Multiples 3</th>" +
+      "<th>Evens and Multiples 3</th></tr>" +
+      "<tr align='left'>" +
+      "<td>" + numEvens + "</td>" +
+      "<td>" + numOdds + "</td>" +
+      "<td>" + numMultiples3 + "</td>" +
+      "<td>" + numMultiples3Evens + "</td></tr></table>"
+      document.write(text);
+    </script>
+  </head>
+  <body>
+  </body>
+</html>
