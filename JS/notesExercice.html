@@ -1,0 +1,27 @@
+<html>
+  <head>
+    <script>
+      // Declarar variables
+      var note1 = parseInt(prompt("Step - 1: Introduce a score"));
+      var note2 = parseInt(prompt("Step - 2: Introduce another score"));
+      var note3 = parseInt(prompt("Step - 3: Introduce another score"));
+      var average = 0;
+      // Calcular la media y almacenarla en average
+      average = (note1 + note2 + note3) / 3;
+      // Si la media es mayor que 5 imprimir que está aprobado
+      if (average >= 5) {
+      	document.write("The student has <b>approved</b> " +
+        "with an average note of " + 
+        (average).toFixed(2));    
+      }
+      // Si la media es menor que 5 imprimir que esta suspendido
+      if (average < 5) {
+      	document.write("The student has <b>suspended</b> " +
+        "with an average note of " + 
+        (average).toFixed(2));    
+      }
+    </script>
+  </head>
+  <body>
+  </body>
+</html>

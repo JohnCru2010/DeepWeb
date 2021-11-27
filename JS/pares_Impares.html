@@ -1,0 +1,34 @@
+<html>
+  <head>
+    <script>
+      // Declarar las variables
+      var evens = "";
+      var odds = "";
+      var text = "";
+      var numEvens = 0;
+      var numOdds = 0;
+      // Preguntar 10 numeros - bucle
+      for (i = 1;i <= 10;i++) {
+        var num = parseInt(prompt("Step - " + i + ": Introduce a number"));
+        // Almacenar pares e impares
+        if (num % 2 == 0) {
+          evens = evens + "<li>" + num + "</li>";
+          numEvens++;
+        } else if (num % 2 > 0) {
+          odds = odds + "<li>" + num + "</li>";
+          numOdds++;
+        }
+      }
+      // Mostrar los resultados
+      text = text + 
+        "<h1>Numbers List</h1>" +
+        "<ol><li>Evens</li><ul>" + evens + 
+        "</ul><li>Odds</li><ul>" + odds + "</ul></ol>" +
+        "The total number of even numbers read has been: " + numEvens +
+        "<br>The total number of odd numbers read has been: " + numOdds;
+      document.write(text);        
+    </script>
+  </head>
+  <body>
+  </body>
+</html>
