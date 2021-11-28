@@ -1,0 +1,58 @@
+<html>
+
+<head>
+    <script>
+        // Declarar variables 
+        var array1 = new Array(10);
+        var array2 = new Array(10);
+        var arraySum = new Array(10);
+        var fila1 = "";
+        var fila2 = "";
+        var fila3 = "";
+        var fila4 = "";
+        var text = "";
+        // Preguntar 10 numeros y almecenarlos en un array - bucle 1
+        for (i = 0; i < 10; i++) {
+            array1[i] = parseInt(prompt("1 - Loop " + (i + 1) + "/10:" + " Introduce a number:"));
+        }
+        // Preguntar 10 numeros y almecenarlos en un array - bucle 2
+        for (i = 0; i < 10; i++) {
+            array2[i] = parseInt(prompt("2 - Loop " + (i + 1) + "/10:" + " Introduce a number:"));
+        }
+        // Sumar los dos arrays
+        for (i = 0; i < 10; i++) {
+            arraySum[i] = array1[i] + array2[i];
+        }
+        // Crear texto filas
+        for (i = 0; i < 10; i++) {
+            if (i == 0) {
+                fila1 += "<tr>";
+                fila2 += "<tr>";
+                fila3 += "<tr>";
+                fila4 += "<tr>";
+            }
+
+            fila1 += "<th>Position:<br>" + i + "</th>";
+            fila2 += "<td>" + array1[i] + "</td>";
+            fila3 += "<td>" + array2[i] + "</td>";
+            fila4 += "<td>" + arraySum[i] + "</td>";
+
+            if (i == 9) {
+                fila1 += "</tr>";
+                fila2 += "</tr>";
+                fila3 += "</tr>";
+                fila4 += "</tr>";
+            }
+        }
+        // Crear texto final
+        text = "<h1>Vector Table</h1>" +
+            "<table border = '1'>" +
+            fila1 + fila2 + fila3 + fila4 +
+            "</table>";
+        document.write(text);
+    </script>
+</head>
+
+<body>
+</body>
+</html>
