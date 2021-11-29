@@ -1,0 +1,56 @@
+<html>
+  <head>
+    <script>
+      // Declar variables
+      var morningAge = 0.00;
+      var afternoonAge = 0.00;
+      var nightAge = 0.00;
+      var text = "";
+      // Preguntar 5 edades de estudiantes - Mañana (bucle)
+      for (i = 1;i <= 5;i++) {
+        var age = parseInt(prompt("Step - " + i + ": Morning student - Introduce an age: "));
+        morningAge += age;        
+      }
+      // Preguntar 6 edades de estudiantes - Tarde (bucle)
+      for (i = 1;i <= 6;i++) {
+        var age = parseInt(prompt("Step - " + i + ": Afternoon student - Introduce an age: "));
+        afternoonAge += age;         
+      }
+      // Preguntar 11 edades de estudiantes - Noche (bucle)
+      for (i = 1;i <= 11;i++) {
+        var age = parseInt(prompt("Step - " + i + ": Night student - Introduce an age: "));
+        nightAge += age;         
+      }
+      // Hacer la media de los estudiantes - Mañana     
+      morningAge = (morningAge / 5).toFixed(2);
+      // Hacer la media de los estudiantes - Tarde
+      afternoonAge = (afternoonAge / 6).toFixed(2);
+      // Hacer la media de los estudiantes - Noche
+      nightAge = (nightAge / 11).toFixed(2);
+      // Encontrar la media mayor
+      var maxAverage = 0.00;
+      if (afternoonAge < morningAge && morningAge > nightAge) {
+        maxAverage = morningAge.toFixed(2);   
+      }
+      else if (morningAge < afternoonAge && afternoonAge > nightAge) {
+        maxAverage = afternoonAge.toFixed(2);     
+      }
+      else if (morningAge < nightAge && nightAge > afternoonAge) {
+        maxAverage = nightAge.toFixed(2);     
+      }      
+      // Mostrar texto final
+      text += "<h1>Shift Table</h1>" +
+        	  "<table border = '1px'>" +
+              "<tr><th>Morning Shift</th>" +
+              "<th>Afternoon Shift</th>" +
+              "<th>Night Shift</th></tr>" +
+              "<tr><td>" + morningAge + "</td>" +
+              "<td>" + afternoonAge + "</td>" +
+              "<td>" + nightAge + "</td></tr></table><br>" +
+              "The shift with a higher average age is " + maxAverage;
+       document.write(text);         
+    </script>
+  </head>
+  <body>
+  </body>
+</html>
