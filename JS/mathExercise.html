@@ -1,0 +1,33 @@
+<html>
+  <head>
+      <script>
+      // Declarar variables
+      var pow10 = 0.00;
+      var pow20 = 0.00;
+      var pow30 = 0.00;
+      var pow40 = 0.00;
+      var pow50 = 0.00;
+      var text = "";
+      // Preguntar un numero
+      var number = prompt("Introduce a number:");
+      // Elevarlo a 10
+      pow10 = Math.pow(number, 10);
+      // Elevarslo a 20
+      pow20 = Math.pow(number, 20);
+      // Elevarslo a 30
+      pow30 = Math.pow(number, 30);
+      // Elevarslo a 40
+      pow40 = Math.pow(number, 40);
+      // Elevarslo a 50
+      pow50 = Math.pow(number, 50);
+      // Mostrar texto final
+      text = "<h1>Power table</h1><table border = '1'>" +
+             "<tr><th>10</th><th>20</th><th>30</th><th>40</th><th>50</th></tr>" +
+             "<tr><th>" + pow10 + "</th><th>" + pow20 + "</th><th>" + pow30 + 
+             "</th><th>" + pow40 + "</th><th>" + pow50 + "</th></tr></table>";
+             document.write(text);
+      </script>
+  </head>
+  <body>   
+  </body>
+</html>
