@@ -1,0 +1,23 @@
+<html>
+  <head>
+    <script>
+        function calculo () {
+             var texto = document.querySelector('input').value;
+             if(texto == "") {
+              alert("You need a value to do the calculation");              
+             } else {
+            var num = parseInt(texto);
+               alert(Math.pow(num, 3));
+            }
+            document.querySelector('input').focus();         
+        }
+    </script>
+  </head>
+  <body>
+    <h1>Cube Exercise</h1>    
+        <label for="num" id="lab">Insert a value:</label>
+        <input id="num" type="text">        
+        <br><br>
+        <input type="button" value="Calculate result" onclick="calculo()">      
+  </body>
+</html>
