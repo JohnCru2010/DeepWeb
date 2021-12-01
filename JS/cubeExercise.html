@@ -2,7 +2,7 @@
   <head>
     <script>
         function calculo () {
-             var texto = document.querySelector('input').value;
+             var texto = document.getElementById('num').value;
              if(texto == "") {
               alert("You need a value to do the calculation");              
              } else {
@@ -15,9 +15,11 @@
   </head>
   <body>
     <h1>Cube Exercise</h1>    
-        <label for="num" id="lab">Insert a value:</label>
-        <input id="num" type="text">        
-        <br><br>
-        <input type="button" value="Calculate result" onclick="calculo()">      
+        <form>
+          <label for="num" id="lab">Insert a value:</label>
+          <input id="num" type="number">        
+          <br><br>
+          <input type="button" value="Calculate result" onclick="calculo()">  
+        </form>     
   </body>
 </html>
