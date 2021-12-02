@@ -1,0 +1,34 @@
+<html>
+  <head> 
+    <script>
+      function calculo () {
+             var campo = document.getElementById('num');
+             var campo2 = document.getElementById('num2');
+             var result = document.getElementById('result');
+             var texto = campo.value
+             var texto2 = campo2.value
+             var textoResult = result.value
+             if(texto == "" || texto2 == "") {
+              alert("You must insert two value to do the calculation");              
+             } else {
+              document.getElementById('result') = num + num2;
+            }       
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Calculation Exercice</h1>
+    <form>
+        <label for="num" id="lab">Insert a value:</label>
+        <input id="num" type="number">
+        <br><br>
+        <label for="num2" id="lab">Insert another value:</label>
+        <input id="num2" type="number">            
+        <br><br>
+        <label for="result" id="lab">Result:</label>
+        <input id="result" type="number"> 
+        <br><br>   
+        <input type="button" value="Calculate result" onclick="calculo()">  
+    </form>     
+  </body>
+</html>
