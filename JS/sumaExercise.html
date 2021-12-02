@@ -2,16 +2,13 @@
   <head> 
     <script>
       function calculo () {
-             var campo = document.getElementById('num');
-             var campo2 = document.getElementById('num2');
+             var num1 = parseInt(document.getElementById('num1').value);
+             var num2 = parseInt(document.getElementById('num2').value);
              var result = document.getElementById('result');
-             var texto = campo.value
-             var texto2 = campo2.value
-             var textoResult = result.value
-             if(texto == "" || texto2 == "") {
+             if(num1 == "" || num2 == "") {
               alert("You must insert two value to do the calculation");              
              } else {
-              document.getElementById('result') = num + num2;
+              result.value = num1 + num2;
             }       
       }
     </script>
@@ -19,10 +16,10 @@
   <body>
     <h1>Calculation Exercice</h1>
     <form>
-        <label for="num" id="lab">Insert a value:</label>
-        <input id="num" type="number">
+        <label for="num1">Insert a value:</label>
+        <input id="num1" type="number">
         <br><br>
-        <label for="num2" id="lab">Insert another value:</label>
+        <label for="num2">Insert another value:</label>
         <input id="num2" type="number">            
         <br><br>
         <label for="result" id="lab">Result:</label>
