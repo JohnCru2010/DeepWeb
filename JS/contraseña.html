@@ -1,0 +1,25 @@
+<html lang="en">
+  <head>
+    <script>
+      function comparar () {
+             var password1 = document.getElementById('password1').value;
+             var password2 = document.getElementById('password2').value;
+             if(password1 != password2) {
+              alert("The passwords are not equals");              
+             } else {
+              alert("The passwords are equals");  
+             }      
+       }       
+    </script>
+  </head>
+  <body> 
+        <label for="password1">Insert your password:</label>
+        <input id="password1" type="password">
+        <br><br>
+        <label for="password2">Insert your password again:</label>
+        <input id="password2" type="password">            
+        <br><br>
+        <input type="button" value="Verify" onclick="comparar()">  
+    </form>     
+  </body>
+</html>
