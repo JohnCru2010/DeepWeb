@@ -1,0 +1,35 @@
+<html>
+  <head>
+    <script>
+      function mostrar () {
+          var radioButton1 = document.getElementById('checkbox1');
+          var radioButton2 = document.getElementById('checkbox2');
+          var texto = "The selected sports are :";
+          if(checkbox1.checked) {
+            texto += "Football "
+          }
+          if(checkbox2.checked) {
+            texto += "Basket "
+          }
+          if(checkbox3.checked) {
+            texto += "Swimming "
+          }
+          alert(texto);
+       }       
+    </script>
+  </head>
+  <body>
+    <h1>Radiobutton Exercise</h1>
+    Are you legal age
+    <br><br>
+    <form>
+      <input type="radio" id="radioButton1" name="radio">
+      <label for="radioButton1">Football</label>
+      <br>
+      <input type="radio" id="radioButton2" name="radio">
+      <label for="radioButton2">Basket</label>
+      <br><br>
+      <input type="button" value="Send" onclick="mostrar()">
+    </form>
+  </body>
+</html>
