@@ -1,0 +1,19 @@
+<html>
+  <head>
+  <title>Exercise 4</title>
+    <script language="JavaScript">
+      //Open pop-up every single time
+      function open_window(){
+        window.open("http://codelearn.com");
+      }
+      function stop_open(){
+        clearTimeout(pop);
+       }
+        pop = setInterval("open_window()", 3000);
+      </script>
+   </head>
+   <body>
+     <h1>Exercise</h1>
+     <input type=button value="Stop openning windows" onclick="stop_open()">
+   </body>
+</html>
